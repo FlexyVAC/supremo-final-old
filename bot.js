@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
-const kufurlu = ["mert", "aiko", "oç", "amq", "amk", "piç", "aq"];
+
 
 var prefix = ayarlar.prefix;
 
@@ -124,12 +124,6 @@ client.on('message', msg => {
 });
 
 
-// Eğer mesasj yukarıdaki kelimeleri içeriyorsa:
-if( kufurlu.some(word =&gt; message.content.includes(word)) ) {
-// Mesajı sil:
-message.delete()
-msg.reply('Küfür Yasak Dostum.');
-}
 
 client.elevation = message => {
   if(!message.guild) {
