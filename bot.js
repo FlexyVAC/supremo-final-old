@@ -122,6 +122,14 @@ client.on('message', msg => {
   }
 });
 
+const kufurlu = ["mert", "aiko", "oç", "amq", "amk", "piç", "aq"];
+// Eğer mesasj yukarıdaki kelimeleri içeriyorsa:
+if( kufurlu.some(word =&gt; message.content.includes(word)) ) {
+// Mesajı sil:
+message.delete()
+msg.reply('Küfür Yasak Dostum.');
+}
+
 client.elevation = message => {
   if(!message.guild) {
 	return; }
