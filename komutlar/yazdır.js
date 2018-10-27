@@ -14,7 +14,7 @@ if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazma
     let permlvl = 0;
     if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
     if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-    if (message.author.id === settings.sahip) permlvl = 4;
+    if (message.author.id === ayarlar.sahip) permlvl = 4;
     return permlvl;
   };
 
