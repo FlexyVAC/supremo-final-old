@@ -143,11 +143,7 @@ client.on('message', msg => {
 
 });
 
-client.on('message', msg => {
-  if (msg.content === prefix + '29ekim') {
-    msg.reply('https://youtu.be/uncK-RJKz1c');
-  }
-});
+
 
 //////////////////////// 
 
