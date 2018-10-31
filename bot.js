@@ -4,7 +4,6 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
-const YoutubeDL = require('youtube-dl');
 const ytdl = require('ytdl-core');
 require('./util/eventLoader')(client);
 
