@@ -25,5 +25,8 @@ module.exports.run = async (bot, message, args, prefix, con) => {
 
 module.exports.help = {
   name: "xp"
-   description: 'Toplam Xp Miktarınızı Gösteririr'
+}
+
+exports.help = {
+  description: 'Toplam Xp Miktarınızı Gösteririr'
 }
