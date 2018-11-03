@@ -4,7 +4,6 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
-const mysql = require('mysql');
 require('./util/eventLoader')(client);
 
 
@@ -162,34 +161,6 @@ client.on("guildMemberAdd", member => {
 
 ////////////////////////
 
-bot.on("message", async message => {
-
-  var timer = setInterval(function () { 
-    var TET = message.guild.roles.find("name", "Owner").setColor(GenerateHex()); //REPLACE OWNER WITH ROLE NAME
-    var TET_1 = message.guild.roles.find("name", "ADMIN").setColor(GenerateHex()); //REPLACE/DELETE THIS LINE
-}, 2000);
-
-  if(message.author.bot) return;
-
-  con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-    if(err) throw err;
-
-  if(message.author.bot) return;
-
-  con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-    if(err) throw err;
-
-    let sql;
-
-    if(rows.length < 1){
-      sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXp()})`
-    } else{
-      let xp = rows[0].xp;
-      sql = `UPDATE xp SET xp = ${xp + generateXp()} WHERE id = '${message.author.id}'`;
-    }
-
-    con.query(sql);
-  });
 
 
 client.on('message', msg => {
