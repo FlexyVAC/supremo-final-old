@@ -18,7 +18,7 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
   if (err) console.error(err);
-  log(`${files.length} komut yüklenecek.`);
+  log(`${files.length} Komut Yüklenecek.`);
   files.forEach(f => {
     let props = require(`./komutlar/${f}`);
     log(`Yüklenen komut: ${props.help.name}.`);
@@ -153,8 +153,8 @@ client.on("guildMemberAdd", member => {
 	
 	member.addRole(role); 
 	
-	channel.send(member + " Artık " + role + " Rolü ile Aramızda");
-	channel.send("https://media.giphy.com/media/8JZu9nEJ8Lubw7Efos/giphy.gif")
+	msg.channel.send(member + " Artık " + role + " Rolü ile Aramızda");
+	msg.channel.send("https://media.giphy.com/media/8JZu9nEJ8Lubw7Efos/giphy.gif")
 	member.send("Aramıza hoş geldin! Artık Member rolüne sahipsin!")
 	
 });
