@@ -143,22 +143,20 @@ client.elevation = message => {
 //////////////////////// 
 
 
-client.on("guildMemberAdd", member => {
-	
-	var channel = member.guild.channels.find("name", "hello");
-	if (!channel) return;
-	
-	var role = member.guild.roles.find("name", "member");
-	if (!role) return;
-	
-	member.addRole(role); 
-	
-	msg.channel.send(member + " Artık " + role + " Rolü ile Aramızda");
-	msg.channel.send("https://media.giphy.com/media/8JZu9nEJ8Lubw7Efos/giphy.gif")
-	member.send("Aramıza hoş geldin! Artık Member rolüne sahipsin!")
-	
+bot.on('guildMemberAdd', member => {
+  console.log(member.user.tag + 'Sunucuya Katıldı!');
+  member.guild.channels.get('472541177825067009').send(member.user.username + 'Sunucuya Katıldı!');	
+  var role = member.guild.roles.find('name', 'Members');
+  member.addRole(role);
 });
 
+ bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('472541177825067009').send(member.user.username + 'Adlı Kullanıcı Sunucuyu Terk Etti');
+     		   
+//
+});      
+       
+       
 ////////////////////////
 
 
