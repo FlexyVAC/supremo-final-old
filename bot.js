@@ -140,24 +140,6 @@ client.elevation = message => {
 
 
 
-//////////////////////// 
-
-
-bot.on('guildMemberAdd', member => {
-  console.log(member.user.tag + 'Sunucuya Katıldı!');
-  member.guild.channels.get('472541177825067009').send(member.user.username + 'Sunucuya Katıldı!');	
-  var role = member.guild.roles.find('name', 'Members');
-  member.addRole(role);
-});
-
- bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('472541177825067009').send(member.user.username + 'Adlı Kullanıcı Sunucuyu Terk Etti');
-     		   
-//
-});      
-       
-       
-////////////////////////
 
 
 
