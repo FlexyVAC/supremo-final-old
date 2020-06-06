@@ -137,8 +137,8 @@ client.elevation = message => {
 };
 
 
-client.on('guildMemberAdd', member => {
-   message.author.send("Supremo JailBreak Discord Sunucusuna Hoş Geldiniz! Steam Grubumuza Katılmak İçin : https://steamcommunity.com/groups/SupremoCommunity");
+client.on('guildMemberAdd', function(member){
+  member.send("Hello there !");
 });
 
 
