@@ -4,8 +4,13 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
+const Welcome = require("discord-welcome");
 require('./util/eventLoader')(client);
 
+
+Welcome(client, {
+    privatemsg : "Supremo Jailbrea"
+    })
 
 
 var prefix = ayarlar.prefix;
