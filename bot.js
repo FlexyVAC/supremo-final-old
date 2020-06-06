@@ -144,6 +144,10 @@ client.on('message', msg => {
   }
 });
 
+client.on('guildMemberAdd', member => {
+   member.send("Welcome to the server!");
+});
+
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
 client.on('warn', e => {
