@@ -90,7 +90,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if (msg.content === prefix + 'supbilgi') {
+  if (msg.content === prefix + 's') {
     msg.reply('Supremo : Komutan ve arkadaşları tarafından kurulan bir topluluktur. Geçmişte bir çok CS:GO sunucuları vardı ve öyle devam edecek.');
   }
 });
@@ -138,7 +138,7 @@ client.elevation = message => {
 
 
 client.on('guildMemberAdd', member => {
-   member.send("Supremo JailBreak Discord Sunucusuna Hoş Geldiniz! Steam Grubumuza Katılmak İçin : https://steamcommunity.com/groups/SupremoCommunity");
+   message.author.send("Supremo JailBreak Discord Sunucusuna Hoş Geldiniz! Steam Grubumuza Katılmak İçin : https://steamcommunity.com/groups/SupremoCommunity");
 });
 
 
