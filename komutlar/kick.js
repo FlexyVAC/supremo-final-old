@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   let guild = message.guild
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let modlog = guild.channels.find('name', 'warns');
+  let modlog = guild.channels.find('name', 'pro-bot');
   if (!modlog) return message.reply('`warns` kanalı oluşturman lazım.');
   if (reason.length < 1) return message.reply('niye kick adamı onu yazaydın.');
   if (message.mentions.users.size < 1) return message.reply('kimi kickleyecem onu yaz.').catch(console.error);
