@@ -5,16 +5,16 @@ exports.run = function(client, message, args) {
     let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.RichEmbed()
-.setDescription('Kullanım: /tavsiye <Tavsiyeniz>'));
+.setDescription('Kullanım: /feedback <Feedbackiniz>'));
 const embed = new Discord.RichEmbed()
 .setColor('RANDOM')
-.setDescription('Tavsiyeniz Bildirildi!')
+.setDescription('Feedbackiniz Bildirildi!')
 message.channel.send(embed)
 const embed2 = new Discord.RichEmbed()
 .setColor("RANDOM")
 .setDescription(`**${message.author.tag}** adlı kullanıcının tavsiyesi:`)
 .addField(`Kulanıcı Bilgileri`, `Kullanıcı ID: ${message.author.id}\nKullanıcı Adı: ${message.author.username}\nKullanıcı Tagı: ${message.author.discriminator}`)
-.addField("Tavsiye", type)
+.addField("Feedback", type)
 .setThumbnail(message.author.avatarURL)
 client.channels.get('502505366152806402').send(embed2); // Kanal ID
 
@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'tavsiye',
-  description: 'Bot veya Server İçin Tavsiye Bildirirsiniz.',
-  usage: '/tavsiye <tavsiyeniz>'
+  name: 'feedback',
+  description: 'Bot veya Server İçin Feedbackiniz.',
+  usage: '/feedback <feedbackiniz>'
 };
