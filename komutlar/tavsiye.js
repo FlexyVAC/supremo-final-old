@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
     let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.RichEmbed()
-.setDescription('Kullanım: /feedback <Feedbackiniz>');
+.setDescription('Kullanım: /feedback <Feedbackiniz>'));
 const embed = new Discord.RichEmbed()
 .setColor('RANDOM')
 .setDescription('Feedbackiniz Bildirildi!')
