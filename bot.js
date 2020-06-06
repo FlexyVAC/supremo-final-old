@@ -137,8 +137,8 @@ client.elevation = message => {
 };
 
 
-client.on('guildMemberAdd', function(member){
-  member.send("Hello there !");
+client.on("message", message => {
+  message.channel.sendMessage("string");
 });
 
 
