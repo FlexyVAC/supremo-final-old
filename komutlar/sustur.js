@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
   let guild = message.guild
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let modlog = guild.channels.find('name', 'warns');
+  let modlog = guild.channels.find('name', 'pro-bot');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Susturulmuş');
   if (!modlog) return message.reply('`warns` kanalını bulamıyorum.').catch(console.error);
   if (!muteRole) return message.reply('`Susturulmuş` adlı bir rol bulamıyorum.').catch(console.error);
