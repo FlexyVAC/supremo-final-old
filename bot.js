@@ -137,13 +137,6 @@ client.elevation = message => {
 };
 
 
-client.on("message", message => {
-  message.channel.sendMessage("string");
-});
-
-
-
-
 
 client.on('message', msg => {
   if (msg.content === prefix + 'profil') {
