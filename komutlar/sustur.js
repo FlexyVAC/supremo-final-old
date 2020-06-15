@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
        if (message.member.roles.find("name", "Players")){ 
          var TeamName = (message.content.substr(11));
         {
-             message.member.removeRole(Players);
+             message.member.removeRole(TeamName);
              message.member.removeRole('717416741507956798');
         }
     }
