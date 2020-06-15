@@ -5,7 +5,7 @@ exports.run = function(client, message) {
   let myRole = message.guild.roles.find("name", "Discord Admin[DA]");
     if(!message.member.roles.has(myRole.id))
     {
-      return message.reply("you pleb, you don't have the permission to use this command.")
+      return message.reply("Bu komutu kullanabilmek için yeterli yetkiye sahip değilsin!")
     }
     if(message.mentions.users.size === 0) 
     {
@@ -14,7 +14,7 @@ exports.run = function(client, message) {
     let killMember = message.guild.member(message.mentions.users.first());
     if (!killMember)
     {
-      return message.reply("user doesn't exist or not valid");
+      return message.reply("Kullanıcı bulunalamadı");
     }
     let roleMembro = message.guild.roles.find("name", "Players");
     let roleSilenced = message.guild.roles.find("name", "Susturulmuş");
@@ -28,7 +28,7 @@ exports.run = function(client, message) {
           {
             killMember.addRole(roleSilenced);
           }
-            message.reply(`${killMember.user.username} was succesfully silenced`).catch(console.error);
+            message.reply(`${killMember.user.username} Ağzı tıkandı!`).catch(console.error);
           }, 5000);
         }).catch(console.error);		
     }
