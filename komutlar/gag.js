@@ -45,5 +45,5 @@ exports.conf = {
 exports.help = {
   name: 'gag', //adını belirledik (kullanmak için gereken komut)
   description: 'Gag komutu', //açıklaması
-  usage: '/gag' //komutun kullanım şekli (mesela hava <bölge>)
+  usage: '/gag <@kullanıcı>' //komutun kullanım şekli (mesela hava <bölge>)
 };
