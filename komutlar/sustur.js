@@ -1,6 +1,18 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   
+       if (msg.member.roles.find("name", "Players")){ 
+         var TeamName = (message.content.substr(11));
+        {
+             msg.member.removeRole(Players);
+             msg.member.removeRole('717416741507956798');
+        }
+    }
+     else 
+    {   }
+  
+  
+  
   if (!message.guild) {
   const ozelmesajuyari = new Discord.RichEmbed()
   .setColor(0xFF0000)
