@@ -9,7 +9,7 @@ exports.run = function(client, message) {
     }
     if(message.mentions.users.size === 0) 
     {
-    return message.reply("please mention a user to kill");
+    return message.reply("Ağzı tıkanıcak kişiyi seçiniz!");
     }
     let killMember = message.guild.member(message.mentions.users.first());
     if (!killMember)
@@ -28,8 +28,8 @@ exports.run = function(client, message) {
           {
             killMember.addRole(roleSilenced);
           }
-            message.reply(`${killMember.user.username} Ağzı tıkandı!`).catch(console.error);
-          }, 5000);
+            message.reply(`${killMember.user.username} adlı Kullanıcının Ağzı tıkandı!`).catch(console.error);
+          }, 500);
         }).catch(console.error);		
     }
 
